@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/freecell/static/css/main.9c32ed44.css",
+    "main.js": "/freecell/static/js/main.a80879bd.js",
+    "static/js/488.5e3de2e2.chunk.js": "/freecell/static/js/488.5e3de2e2.chunk.js",
+    "index.html": "/freecell/index.html",
+    "main.9c32ed44.css.map": "/freecell/static/css/main.9c32ed44.css.map",
+    "main.a80879bd.js.map": "/freecell/static/js/main.a80879bd.js.map",
+    "488.5e3de2e2.chunk.js.map": "/freecell/static/js/488.5e3de2e2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9c32ed44.css",
+    "static/js/main.a80879bd.js"
+  ]
+}
