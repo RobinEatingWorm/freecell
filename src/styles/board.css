@@ -1,0 +1,42 @@
+#board {
+  box-sizing: border-box;
+  gap: min(var(--board-padding), var(--board-padding-max));
+  margin: 0 auto;
+  max-width: var(--board-max-width);
+  min-height: var(--board-min-height);
+  padding: min(var(--board-padding), var(--board-padding-max));
+  width: 100%;
+}
+
+#board-top {
+  justify-content: space-between;
+}
+
+#columns {
+  flex-grow: 1;
+  margin: 0 auto;
+  width: calc(100% * var(--n-columns) / var(--n-board-divisions));
+}
+
+#foundations {
+  width: calc(100% * var(--n-foundations) / var(--n-board-divisions));
+}
+
+#freecells {
+  width: calc(100% * var(--n-freecells) / var(--n-board-divisions));
+}
+
+.column {
+  padding: calc(var(--board-element-padding) / 2);
+  width: 100%;
+}
+
+.foundation {
+  padding: var(--board-element-padding);
+  width: 100%;
+}
+
+.freecell {
+  padding: var(--board-element-padding);
+  width: 100%;
+}

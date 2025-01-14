@@ -1,5 +1,5 @@
-import Card from './Card.js';
-import { useGameDispatch } from '../context/GameContext.js';
+import Card from './Card.jsx';
+import { useGameDispatch } from '../context/GameContext.jsx';
 
 export default function Foundation({ position, card }) {
   const dispatch = useGameDispatch();
@@ -7,18 +7,16 @@ export default function Foundation({ position, card }) {
     <div
       className="foundation"
       onClick={event => {
-        // Prevent race conditions from unwanted event bubbling
+        // Stop propagation first to prevent race conditions
         event.stopPropagation();
         dispatch({ type: "click-board", event, position });
       }}
       onDragOver={event => event.preventDefault()}
-      onDrop={event => dispatch({ type: "drop", event, position })}
+      onDrop={event => {dispatch({ type: "drop", event, position })}}
     >
-      <div className={"card-frame card-space top-border" + (card ? " top-occupied" : "")}></div>
-      {card ? (
+      <div className={`card card-frame${card ? " card-frame-occupied" : ""}`}></div>
+      {card && (
         <Card position={position} rank={card.rank} suite={card.suite} movable={false} overlap={false} />
-      ) : (
-        <></>
       )}
     </div>
   );

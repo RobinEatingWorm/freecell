@@ -1,50 +1,38 @@
-.card-body-text {
+.card {
+  aspect-ratio: var(--card-aspect-ratio);
+  border: min(var(--card-border), var(--card-border-max)) solid;
+  border-radius: min(var(--card-border), var(--card-border-max));
+  box-sizing: border-box;
+}
+
+.card-frame {
+  border-color: gray;
+}
+
+.card-frame-occupied {
+  margin-bottom: calc(-100% / var(--card-aspect-ratio));
+}
+
+.card-header {
+  justify-content: space-between;
+  padding: 5%;
+}
+
+.card-overlap {
+  margin-bottom: max(var(--card-overlap-margin-bottom), var(--card-overlap-margin-bottom-max));
+}
+
+.card-text {
   font-family: monospace;
-  font-size: min(72px, calc(100vw * 72 / 1280));
   font-weight: bold;
   margin: 0;
   text-align: center;
 }
 
-.card-frame {
-  border: min(5px, calc(100vw * 5 / 1280)) solid;
-  border-radius: min(5px, calc(100vw * 5 / 1280));
+.card-text-body {
+  font-size: min(var(--card-text-body-font-size), var(--card-text-body-font-size-max));
 }
 
-.card-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 5%;
-}
-
-.card-header-text {
-  font-family: monospace;
-  font-size: min(36px, calc(100vw * 36 / 1280));
-  font-weight: bold;
-  margin: 0;
-  text-align: left;
-  white-space: pre;
-}
-
-.card-overlap {
-  margin-bottom: max(-125px, calc(100vw * -125 / 1280));
-}
-
-.card-static {
-  position: relative;
-}
-
-.card-space {
-  aspect-ratio: 2.5 / 3.5;
-  box-sizing: border-box;
-  width: 100%;
-}
-
-.top-border {
-  border-color: gray;
-}
-
-.top-occupied {
-  margin-bottom: calc(-100% * 3.5 / 2.5);
+.card-text-header {
+  font-size: min(var(--card-text-header-font-size), var(--card-text-header-font-size-max));
 }
