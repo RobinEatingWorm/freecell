@@ -29,7 +29,7 @@ export default function Card({ position, rank, suite, movable, overlap }) {
   // Handle positioning when dragging starts
   if (drag && dragOffset === null) {
     const { height, width, x, y } = cardRef.current.getBoundingClientRect();
-    setDragOffset({ x: game.clientPosition.x - x, y: game.clientPosition.y - y });
+    setDragOffset({ x: game.clientPosition.x - x, y: game.clientPosition.y - (y + window.scrollY) });
     setDragSize({ height: height, width: width });
   }
 
