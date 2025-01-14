@@ -1,13 +1,45 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --board-element-padding: 1%;
+  --board-max-width: calc(1px * var(--board-max-width-ratio));
+  --board-max-width-ratio: 1280;
+  --board-min-height: 100vh;
+  --board-padding: 1vw;
+  --board-padding-max: calc(var(--board-max-width) / 100);
+
+  --card-aspect-ratio: calc(2.5 / 3.5);
+  --card-border: calc(100vw * var(--card-border-ratio) / var(--board-max-width-ratio));
+  --card-border-max: calc(1px * var(--card-border-ratio));
+  --card-border-ratio: 5;
+  --card-overlap-margin-bottom: calc(100vw * var(--card-overlap-margin-bottom-ratio) / var(--board-max-width-ratio));
+  --card-overlap-margin-bottom-max: calc(1px * var(--card-overlap-margin-bottom-ratio));
+  --card-overlap-margin-bottom-ratio: -125;
+  --card-text-body-font-size: calc(100vw * var(--card-text-body-font-size-ratio) / var(--board-max-width-ratio));
+  --card-text-body-font-size-max: calc(1px * var(--card-text-body-font-size-ratio));
+  --card-text-body-font-size-ratio: 72;
+  --card-text-header-font-size: calc(100vw * var(--card-text-header-font-size-ratio) / var(--board-max-width-ratio));
+  --card-text-header-font-size-max: calc(1px * var(--card-text-header-font-size-ratio));
+  --card-text-header-font-size-ratio: 36;
+
+  --control-button-border: calc(100vw * var(--control-button-border-ratio) / var(--board-max-width-ratio));
+  --control-button-border-max: calc(1px * var(--control-button-border-ratio));
+  --control-button-border-ratio: 2.5;
+  --control-button-font-size: calc(100vw * var(--control-button-font-size-ratio) / var(--board-max-width-ratio));
+  --control-button-font-size-max: calc(1px * var(--control-button-font-size-ratio));
+  --control-button-font-size-ratio: 24;
+  --control-element-padding: 1vw;
+  --control-element-padding-max: calc(var(--board-max-width) / 100);
+  --control-message-font-size: calc(100vw * var(--control-message-font-size-ratio) / var(--board-max-width-ratio));
+  --control-message-font-size-max: calc(1px * var(--control-message-font-size-ratio));
+  --control-message-font-size-ratio: 48;
+  --control-padding: 1vw;
+  --control-padding-max: calc(var(--board-max-width) / 100);
+
+  --n-board-divisions: 9;
+  --n-columns: 8;
+  --n-foundations: 4;
+  --n-freecells: 4;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
 }

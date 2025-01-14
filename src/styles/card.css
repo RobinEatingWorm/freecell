@@ -1,0 +1,38 @@
+.card {
+  aspect-ratio: var(--card-aspect-ratio);
+  border: min(var(--card-border), var(--card-border-max)) solid;
+  border-radius: min(var(--card-border), var(--card-border-max));
+  box-sizing: border-box;
+}
+
+.card-frame {
+  border-color: gray;
+}
+
+.card-frame-occupied {
+  margin-bottom: calc(-100% / var(--card-aspect-ratio));
+}
+
+.card-header {
+  justify-content: space-between;
+  padding: 5%;
+}
+
+.card-overlap {
+  margin-bottom: max(var(--card-overlap-margin-bottom), var(--card-overlap-margin-bottom-max));
+}
+
+.card-text {
+  font-family: monospace;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+}
+
+.card-text-body {
+  font-size: min(var(--card-text-body-font-size), var(--card-text-body-font-size-max));
+}
+
+.card-text-header {
+  font-size: min(var(--card-text-header-font-size), var(--card-text-header-font-size-max));
+}

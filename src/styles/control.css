@@ -1,0 +1,40 @@
+#control {
+  background-color: black;
+  padding: min(var(--control-padding), var(--control-padding-max));
+}
+
+#control-buttons {
+  gap: min(var(--control-padding), var(--control-padding-max));
+}
+
+#control-message {
+  color: white;
+  font-size: min(var(--control-message-font-size), var(--control-message-font-size-max));
+  margin: auto 0;
+  padding: min(var(--control-element-padding), var(--control-element-padding-max));
+}
+
+.control-button {
+  background-color: black;
+  border: min(var(--control-button-border), var(--control-button-border-max)) solid;
+  border-color: white;
+  border-radius: min(var(--control-button-border), var(--control-button-border-max));
+  font-size: min(var(--control-button-font-size), var(--control-button-font-size-max));
+  padding: min(var(--control-element-padding), var(--control-element-padding-max));
+}
+
+.control-button:active {
+  background-color: white;
+  border-color: gray;
+  color: black;
+}
+
+.control-spacer {
+  flex-grow: 1;
+}
+
+.control-text {
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+}
