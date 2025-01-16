@@ -1,7 +1,7 @@
 import { createContext, useContext, useReducer } from 'react';
 
 import blank from '../assets/blank.png';
-import { getColumnLength, getFoundationSuiteIndexAny, sameMajorPosition } from '../utils/board.js';
+import { getColumnLength, getFoundationSuitIndexAny, sameMajorPosition } from '../utils/board.js';
 import { createInitialGame, resetGameMove } from '../utils/game.js';
 import { isValidMove, makeMove } from '../utils/move.js';
 
@@ -43,7 +43,7 @@ function gameReducer(game, action) {
       const card = game.move.from[0] === "columns" ? boardFrom[game.move.from[2]] : boardFrom;
       game.move.to = (
         sameMajorPosition(game.move.from, action.position)
-        ? ["foundations", getFoundationSuiteIndexAny(game.board, card.suite)]
+        ? ["foundations", getFoundationSuitIndexAny(game.board, card.suit)]
         : action.position.slice(0, 2)
       );
 

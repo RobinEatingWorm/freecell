@@ -8,11 +8,11 @@ export const createInitialBoard = () => ({
 });
 
 export const getColumnLength = (board, index) => board.columns[index].length;
-export const getFoundationSuiteIndex = (board, suite) => board.foundations.map(card => card?.suite).indexOf(suite);
-export const getFoundationSuiteIndexAny = (board, suite) => (
-  getFoundationSuiteIndex(board, suite) === -1
-  ? board.foundations.map(card => card?.suite).indexOf(undefined)
-  : getFoundationSuiteIndex(board, suite)
+export const getFoundationSuitIndex = (board, suit) => board.foundations.map(card => card?.suit).indexOf(suit);
+export const getFoundationSuitIndexAny = (board, suit) => (
+  getFoundationSuitIndex(board, suit) === -1
+  ? board.foundations.map(card => card?.suit).indexOf(undefined)
+  : getFoundationSuitIndex(board, suit)
 );
 
 export const sameMajorPosition = (position1, position2) => (

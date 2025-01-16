@@ -16,7 +16,7 @@ export default function FreeCell({ position, card }) {
     >
       <div className={`card card-frame${card ? " card-frame-occupied" : ""}`}></div>
       {card && (
-        <Card position={position} rank={card.rank} suite={card.suite} movable={true} overlap={false} />
+        <Card position={position} rank={card.rank} suit={card.suit} movable={true} overlap={false} />
       )}
     </div>
   );

@@ -1,4 +1,4 @@
-import { getFoundationSuiteIndex, sameMajorPosition } from './board.js'
+import { getFoundationSuitIndex, sameMajorPosition } from './board.js'
 import { canStack } from './card.js';
 
 export function isValidMove(board, move) {
@@ -32,11 +32,11 @@ export function isValidMove(board, move) {
       break;
     }
     case "foundations": {
-      const foundationSuiteIndex = getFoundationSuiteIndex(board, card.suite);
+      const foundationSuitIndex = getFoundationSuitIndex(board, card.suit);
       if (
         stackLength > 1
-        || foundationSuiteIndex === -1 && card.rank !== 1
-        || foundationSuiteIndex !== -1 && foundationSuiteIndex !== move.to[1]
+        || foundationSuitIndex === -1 && card.rank !== 1
+        || foundationSuitIndex !== -1 && foundationSuitIndex !== move.to[1]
         || card.rank === 1 && boardTo !== null
         || card.rank !== 1 && card.rank !== boardTo.rank + 1
       ) {

@@ -16,7 +16,7 @@ export default function Foundation({ position, card }) {
     >
       <div className={`card card-frame${card ? " card-frame-occupied" : ""}`}></div>
       {card && (
-        <Card position={position} rank={card.rank} suite={card.suite} movable={false} overlap={false} />
+        <Card position={position} rank={card.rank} suit={card.suit} movable={false} overlap={false} />
       )}
     </div>
   );

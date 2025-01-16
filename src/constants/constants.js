@@ -4,4 +4,4 @@ export const N_FOUNDATIONS = 4;
 export const N_FREECELLS = 4;
 
 export const N_RANKS = 13;
-export const N_SUITES = 4;
+export const N_SUITS = 4;

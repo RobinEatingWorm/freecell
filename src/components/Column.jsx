@@ -21,7 +21,7 @@ export default function Column({ position, cards }) {
           key={index}
           position={[...position, index]}
           rank={card.rank}
-          suite={card.suite}
+          suit={card.suit}
           movable={movable[index]}
           overlap={index !== cards.length - 1}
         />

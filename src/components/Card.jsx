@@ -2,10 +2,10 @@ import { useRef, useState } from 'react';
 
 import { N_CARDS } from '../constants/constants.js';
 import { useGame, useGameDispatch } from '../context/GameContext.jsx';
-import { formatColor, formatRank, formatSuite } from '../utils/card.js';
+import { formatColor, formatRank, formatSuit } from '../utils/card.js';
 import { sameMajorPosition } from '../utils/board.js';
 
-export default function Card({ position, rank, suite, movable, overlap }) {
+export default function Card({ position, rank, suit, movable, overlap }) {
   // Drag positioning state
   const [dragOffset, setDragOffset] = useState(null);
   const [dragSize, setDragSize] = useState(null);
@@ -43,7 +43,7 @@ export default function Card({ position, rank, suite, movable, overlap }) {
   const style = {
     backgroundColor: click ? "black" : "white",
     borderColor: click ? "gray" : "black",
-    color: formatColor(suite, click),
+    color: formatColor(suit, click),
     position: drag ? "absolute" : "relative",
     zIndex: (position[0] === "columns" && position[2]) + (drag && N_CARDS),
     ...(drag && dragOffset !== null && {
@@ -62,16 +62,16 @@ export default function Card({ position, rank, suite, movable, overlap }) {
       onClick={movable ? event => {
         // Stop propagation first to prevent race conditions
         event.stopPropagation();
-        dispatch({ type: "click-card", event, position, card: { rank, suite } });
+        dispatch({ type: "click-card", event, position, card: { rank, suit } });
       } : null}
-      onDragStart={event => dispatch({ type: "drag-start", event, position, card: { rank, suite } })}
+      onDragStart={event => dispatch({ type: "drag-start", event, position, card: { rank, suit } })}
       onDrag={event => dispatch({ type: "drag", event, cardRef })}
       onDragEnd={event => dispatch({ type: "drag-end", event, cardRef })}
       draggable={movable}
     >
       <div className="card-header flex-row">
         <p className="card-text card-text-header">{formatRank(rank)}</p>
-        <p className="card-text card-text-header">{formatSuite(suite)}</p>
+        <p className="card-text card-text-header">{formatSuit(suit)}</p>
       </div>
       <p className="card-text card-text-body">{formatRank(rank)}</p>
     </div>
